@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let page = path.split("/").pop();
 
   switch (page) {
-    case "index.html":
+    case "https:abukajary.github.ioportfolio":
       let el = document.getElementById('a_home');
       el.style.borderBottom = "1px solid black";
       break;
