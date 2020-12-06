@@ -1,148 +1,245 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 * {
-  padding: 0;
-  margin: 0;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
 }
-.pre-wrapper {
-  display: flex;
-  width: 100%;
-  height: 500px;
+a {
+    text-decoration: none;
+}
+.nav_menu {
+    position: fixed;
+    margin: 20px 0 0 20px;
+    /*width: 30%;*/
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+.nav_menu a {
+    padding: 10px;
+    color: black;
+    font-size: 20px;
 }
 
-/*https://www.splcreditservices.co.uk/wp-content/uploads/2019/07/Business-Services-header.jpg*/
-.info {
-  width: 100%;
-  height: 100%;
-  background-image: url("https://27g7rejg2m210nj4f2obmbpx-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/listing.jpg");
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'Roboto', sans-serif;
-  /*background-size: cover;*/
-  /*background-color: black;*/
+.section {
+    display: flex;
+    justify-content: center;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main__introduction {
+    font-size: 27px;
+    margin: 5px;
+}
+.main__links {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main__links a {
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.breaker {
+    width: 90%;
+    border: 2px solid black;
+    margin: 50px;
 }
 
-.main_avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50%;
-}
-.main_avatar img {
-  width: 200px;
-  height: 200px;
-}
 
-.introduction {
-  display: flex;
-  width: 20%;
-  margin: 0 auto;
-  flex-direction: column;
-  align-items: center;
+.about_me {
+    background-image: url("https://images.wallpapersden.com/image/download/synthwave-and-retrowave_a2tpbmyUmZqaraWkpJRmbmdlrWZlbWU.jpg");
+    background-size: cover;
+    text-align: center;
 }
-
-.introduction p, h2 {
-  background-color: white;
-  padding: 5px;
-  font-size: 25px;
-  margin: 2px;
-  white-space: nowrap;
+.about_me__block {
+    color: white;
+    padding: 15px;
+    background: #282828;
+    opacity: 0.8;
 }
-.links {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  font-size: 20px;
+.block {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    /*background: #9e9e9e ;*/
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
 }
-.links a {
-  text-decoration: none;
-  color: white;
-  margin: 0 11px;
+.block__info {
+    width: 60%;
+    height: 80%;
+    background: #282828 ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.wrapper {
-  width: 70%;
-  margin: 15px auto;
-  font-family: 'Roboto', sans-serif;
+.info_title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
 }
-.menu {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-
-  width: 100%;
-  background: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  white-space: nowrap;
-  padding: 15px;
-  box-shadow: 0 2px 4px -3px gray;
+.info_block_helper {
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
 }
-.menu a {
-  text-decoration: none;
-  color: black;
-  margin: 0 11px;
-  font-size: 22px;
+.info_block {
+    width: 30%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
 }
-.hover_underline::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 1px;
-  background: black;
-  transition: width .30s;
+.info_block img {
+    width: 50px;
+    height: 50px;
 }
-.hover_underline:hover::after {
-  /*transition: ease-in-out 2ms;*/
-  width: 100%;
+.block__subInfo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 25px;
+    padding: 0 0 0 15px;
+}
+.education {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .post {
-  margin-top: 5%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto;
 }
 .post h1{
-  font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 .post p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
-  margin: 15px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    margin: 15px 0;
 }
 .post_details {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px -3px gray;
-  padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px -3px gray;
+    padding: 20px 0;
 }
 .post_details a {
-  font-weight: bolder;
-  font-size: large;
-  text-decoration: none;
-  color: black;
+    font-weight: bolder;
+    font-size: large;
+    text-decoration: none;
+    color: black;
 }
 .share {
-  width: 25%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
 }
-footer {
-  display: flex;
-  justify-content: center;
-  background: black;
-  width: 100%;
-  padding: 20px;
-  margin: 0 10px;
-  color: white;
+.education_info__year {
+    width: 30%;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+.education_info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /*justify-content: space-between;*/
+    margin-top: 20px;
+}
+
+/*hovers*/
+.hover_underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: black;
+    transition: width .30s;
+}
+.hover_underline:hover::after {
+    /*transition: ease-in-out 2ms;*/
+    width: 100%;
+}
+#fp-nav ul li .fp-tooltip {
+    color: white;
+    padding: 2px;
+    background: black;
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+    border: 1px solid white;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    border: 1px solid white;
+}
+
+/*MEDIA*/
+@media (max-width: 700px) {
+    .block {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+    .block__info {
+        width: 100%;
+    }
+    .block__subInfo {
+        width: 100%;
+    }
+    .education_info {
+        margin-top: 0;
+    }
+    .share {
+        width: 50%;
+    }
+    .main {
+        text-align: center;
+    }
+    .main p {
+        margin: 2%;
+    }
+}
+@media (max-width: 500px) {
+    .education_info {
+        flex-direction: column;
+    }
+    .post {
+        width: 85%;
+    }
 }
