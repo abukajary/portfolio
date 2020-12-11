@@ -51,6 +51,7 @@ a {
     padding: 10px;
     border: 2px solid black;
     margin: 10px;
+    transition: 0.8s;
 }
 .breaker {
     width: 90%;
@@ -70,6 +71,9 @@ a {
     background: #282828;
     opacity: 0.8;
 }
+.about_me__block h1{
+    font-size: 2vw;
+}
 .block {
     display: flex;
     width: 100%;
@@ -78,7 +82,7 @@ a {
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    padding: 50px;
+
 }
 .block__info {
     width: 60%;
@@ -119,14 +123,14 @@ a {
     height: 50px;
 }
 .block__subInfo {
-    width: 20%;
+    width: 30%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    font-size: 25px;
-    padding: 0 0 0 15px;
+    font-size: 21px;
+    margin: 2%;
 }
 .education {
     display: flex;
@@ -184,7 +188,43 @@ a {
     margin-top: 20px;
 }
 
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.contacts__info {
+    margin: 5%;
+}
+.contacts__feedback {
+    width: 30%;
+}
+.contacts__feedback label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contacts__feedback button {
+    padding: 15px;
+    background: aquamarine;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+.footer {
+    background: #282828;
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+}
 /*hovers*/
+.main__links a:hover{
+    background: black;
+    color: white;
+    transition: 0.8s;
+}
+
 .hover_underline::after {
     content: '';
     display: block;
@@ -220,7 +260,7 @@ a {
         width: 100%;
     }
     .block__subInfo {
-        width: 100%;
+        width: 90%;
     }
     .education_info {
         margin-top: 0;
@@ -233,6 +273,32 @@ a {
     }
     .main p {
         margin: 2%;
+    }
+    .post h1{
+        font-size: 3vw;
+    }
+    .post p {
+        font-size: 3vw;
+    }
+    .post h1{
+        font-size: 4vw;
+    }
+    .about_me__block h1{
+        font-size: 4vw;
+    }
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .contacts__feedback {
+        width: 70%;
+    }
+    .contacts__info {width: 70%}
+    .contacts__feedback input textarea {
+
+        min-width: 200px;
+        max-width: 300px;
     }
 }
 @media (max-width: 500px) {

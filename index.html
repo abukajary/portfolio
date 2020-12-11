@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Portfolio: Abubakir Jarylgapov</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/9e06e8df20.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
@@ -28,25 +28,25 @@
             </div>
             <span class="breaker"></span>
             <div class="main__links">
-                <a href="">MY WORKS</a>
-                <a href="">GITHUB</a>
-                <a href="">LINKEDIN</a>
-                <a href="">CONTACTS</a>
-                <a href="">CV</a>
+                <a href="https://famapp-ae3bb.web.app/index.html">MY WORKS(soon)</a>
+                <a href="https://github.com/abukajary">GITHUB</a>
+                <a href="https://www.linkedin.com/in/abubakir-jarylgapov-0508331b1/">LINKEDIN</a>
+                <a href="#contacts">CONTACTS</a>
+                <a href="https://hh.kz/resume/1646c73fff063ea78a0039ed1f525978777544">CV</a>
             </div>
         </div>
     </div>
 
         <div class="section about_me">
             <div class="about_me__block">
-                <h1>Abubakir, 20 y.o. student at SDU</h1>
+                <h1>Abubakir, 20 y.o. SDU student</h1>
             </div>
             <div class="about_me__block">
                 <h1>
                     Frontend: HTML, CSS, JS developer
                 </h1>
                 <h1>
-                    Backend: Django, Node.js developer
+                    Backend: Django developer
                 </h1>
                 <h1>
                     Additional knowledge: Java(mobile dev), Python
@@ -107,7 +107,6 @@
         <div class="education">
             <div class="post">
                 <h1>Education</h1>
-                <h5>by Abubakir Jarylgapov on 29th november, 2020</h5>
 
                 <div class="education_info">
                     <div class="education_info__year">2019</div>
@@ -139,7 +138,6 @@
             </div>
             <div class="post">
                 <h1>Internship</h1>
-                <h5>by Abubakir Jarylgapov on 29th november, 2020</h5>
 
                 <div class="education_info">
                     <div class="education_info__year">2020-2020</div>
@@ -163,13 +161,36 @@
             </div>
         </div>
     </div>
+    <div class="section footer">
+        <div class="contacts">
+            <div class="contacts__info">
+                <h1>Contact me</h1>
+                <p>Tel: 87088071337</p>
+                <p>Email: jarylgapov.abubakir@gmail.com</p>
+            </div>
+            <div class="contacts__feedback">
+                <h1>Write me</h1>
+                <form action="javascript:sendMail();" name="pmForm" id="pmForm" method="post">
+                    <label for="SMSubject">
+                        <input type="text" name="SMSubject" id="SMSubject" placeholder="Subject" style="padding: 5px; height: 20px"/>
+                        <textarea name="SMBody" id="SMBody" placeholder="Body text (resize me)" style="margin: 2% 0; padding: 5px; min-height: 100px; resize: vertical;
+    max-height: 300px;"></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
 </div>
+
+    <script src="js/main.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" crossorigin="anonymous"></script>
     <script>
         new fullpage('#fullPage', {
-            anchors: ['introduction', 'about', 'skills', 'edu'],
-            navigationTooltips: ['Introduction', 'About me', 'Skills', 'Education'],
+            anchors: ['introduction', 'about', 'skills', 'edu', 'contacts'],
+            navigationTooltips: ['Introduction', 'About me', 'Skills', 'Education', 'Contacts'],
             autoScrolling: true,
             navigation: true,
             // responsiveWidth: 700,
