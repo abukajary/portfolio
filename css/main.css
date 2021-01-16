@@ -1,29 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-
+* {margin: 0;padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-a {
-    text-decoration: none;
-}
-.nav_menu {
-    position: fixed;
-    margin: 20px 0 0 20px;
-    /*width: 30%;*/
-    z-index: 2;
+a {text-decoration: none;}
 
+/* Dark mode*/
+.dark {
+    background: #121212;
+    color: white;
+}
+.dark .block__subInfo {
+    color: white;
+}
+/*Dark mode*/
+/*Tab links*/
+.section .skills .hide {
+    display: none;
+}
+.section .skills .show {
     display: flex;
-    flex-direction: column;
-    opacity: 1;
 }
-.nav_menu a {
-    padding: 10px;
-    color: black;
-    font-size: 20px;
+@-webkit-keyframes resize { from {width: 40%;} to {width: 60%;} }
+@keyframes resize {
+    from {
+        width: 40%;
+    }
+    to {
+        width: 60%;
+    }
 }
 
+.fade {
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+}
+@-webkit-keyframes fade { from {opacity: 0.2;} to {opacity: 1;} }
+@keyframes fade {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*Tab links*/
 .section {
     display: flex;
     justify-content: center;
@@ -43,11 +66,13 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    white-space: nowrap;
+    word-wrap: break-word;
 }
 .main__links a {
     color: black;
     cursor: pointer;
-    font-size: 20px;
+    font-size: calc(0.5rem + 1vw);
     padding: 10px;
     border: 2px solid black;
     margin: 10px;
@@ -59,7 +84,19 @@ a {
     margin: 50px;
 }
 
-
+.header_tab {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: #282828;
+}
+.header_tab__link {
+    color: white;
+    padding: 25px 0px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
 .about_me {
     background-image: url("https://images.wallpapersden.com/image/download/synthwave-and-retrowave_a2tpbmyUmZqaraWkpJRmbmdlrWZlbWU.jpg");
     background-size: cover;
@@ -78,7 +115,6 @@ a {
     display: flex;
     width: 100%;
     height: 600px;
-    /*background: #9e9e9e ;*/
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
@@ -124,13 +160,12 @@ a {
 }
 .block__subInfo {
     width: 30%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     font-size: 21px;
-    margin: 2%;
+    margin: calc(10px + 1vw);
 }
 .education {
     display: flex;
@@ -177,14 +212,12 @@ a {
 .education_info__year {
     width: 30%;
     display: flex;
-    /*justify-content: center;*/
     align-items: center;
 }
 .education_info {
     display: flex;
     flex-direction: row;
     width: 100%;
-    /*justify-content: space-between;*/
     margin-top: 20px;
 }
 
@@ -218,10 +251,16 @@ a {
     margin: 0 auto;
     padding: 0;
 }
+.contacts__feedback form button {
+    background: #121212;
+    color: white;
+    font-family: "Roboto Thin";
+    width: 100%;
+}
 /*hovers*/
 .main__links a:hover{
     background: black;
-    color: white;
+    color: white !important;
     transition: 0.8s;
 }
 
@@ -237,6 +276,9 @@ a {
     /*transition: ease-in-out 2ms;*/
     width: 100%;
 }
+
+/*hovers*/
+/*fullpage js*/
 #fp-nav ul li .fp-tooltip {
     color: white;
     padding: 2px;
@@ -248,6 +290,7 @@ a {
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
     border: 1px solid white;
 }
+/*fullpage js*/
 
 /*MEDIA*/
 @media (max-width: 700px) {
@@ -275,7 +318,7 @@ a {
         margin: 2%;
     }
     .post h1{
-        font-size: 3vw;
+        font-size: 2vw;
     }
     .post p {
         font-size: 3vw;
@@ -309,3 +352,4 @@ a {
         width: 85%;
     }
 }
+/*MEDIA*/
