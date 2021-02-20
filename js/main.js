@@ -43,22 +43,27 @@ window.addEventListener('DOMContentLoaded', function() {
     let dMode = 0;
 
     dark_mode.addEventListener('click', function() {
-        if (dMode) {
+        if (dMode === 1) {
             dMode = 0;
+            dark_mode.textContent = "Light mode";
             document.body.classList.remove('dark');
             links.forEach((item)=> {
                 item.style.color = "black";
             })
-            dark_mode.textContent = "Light mode";
         }
         else {
             dMode = 1;
+            dark_mode.textContent = "Dark mode";
             document.body.classList.add('dark');
             links.forEach((item)=> {
                 item.style.color = "white";
             })
-            dark_mode.textContent = "Dark mode";
         }
     });
+    //
+    let nextUpd = document.getElementById('nextUpd');
+    nextUpd.addEventListener('click', ()=>{
+        alert("Следующий Апдейт: Кнопка настроек отключения прокрутки и перевода страницы + работа над типографией")
+    })
 
 });

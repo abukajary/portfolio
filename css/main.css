@@ -47,9 +47,11 @@ a {text-decoration: none;}
 }
 
 /*Tab links*/
+/*body*/
 .section {
     display: flex;
     justify-content: center;
+    justify-items: center;
 }
 .main {
     display: flex;
@@ -85,6 +87,8 @@ a {text-decoration: none;}
 }
 
 .header_tab {
+    position: absolute;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -93,23 +97,33 @@ a {text-decoration: none;}
 }
 .header_tab__link {
     color: white;
-    padding: 25px 0px;
+    padding: 25px 0;
     border-bottom: 2px solid black;
     cursor: pointer;
 }
 .about_me {
-    background-image: url("https://images.wallpapersden.com/image/download/synthwave-and-retrowave_a2tpbmyUmZqaraWkpJRmbmdlrWZlbWU.jpg");
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.about_me__info {
+    width: 40%;
+    background: #C4C4C4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.about_me__img {
+    width: 368px;
+    height: 537px;
+
+    background-image: url(../img/me.jpg);
     background-size: cover;
-    text-align: center;
-}
-.about_me__block {
-    color: white;
-    padding: 15px;
-    background: #282828;
-    opacity: 0.8;
-}
-.about_me__block h1{
-    font-size: 2vw;
 }
 .block {
     display: flex;
@@ -326,9 +340,6 @@ a {text-decoration: none;}
     .post h1{
         font-size: 4vw;
     }
-    .about_me__block h1{
-        font-size: 4vw;
-    }
     .contacts {
         display: flex;
         flex-direction: column;
@@ -343,6 +354,13 @@ a {text-decoration: none;}
         min-width: 200px;
         max-width: 300px;
     }
+    .about_me__info{
+        font-size: 18px;
+    }
+    .about_me__img {
+        width: 50vw;
+        height: 50vh;
+    }
 }
 @media (max-width: 500px) {
     .education_info {
@@ -350,6 +368,9 @@ a {text-decoration: none;}
     }
     .post {
         width: 85%;
+    }
+    .about_me__info{
+        font-size: 3vw;
     }
 }
 /*MEDIA*/
