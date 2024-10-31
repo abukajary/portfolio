@@ -1,0 +1,26 @@
+{
+  "edu": {
+    "sdu": {
+      "logo": "",
+      "date": "2019-2024",
+      "name": "Suleyman Demirel University (SDU)",
+      "major": "Диплом бакалавра Инжинера и Естественных Наук - Информационные системы",
+      "relatedSkills": [
+        "Создание и управление баз данных PL/SQL",
+        "Основы Project Management",
+        "Алгоритмы"
+      ]
+    },
+    "sdc": {
+      "logo": "",
+      "date": "2016-2019",
+      "name": "Suleyman Demirel College (SDC)",
+      "major": "Диплом Информационные системы",
+      "relatedSkills": [
+        "Основы python и django",
+        "Основы HTML, CSS, Javascript",
+        "Основы UX/UI используя Adobe XD"
+      ]
+    }
+  }
+}
