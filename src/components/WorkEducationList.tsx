@@ -8,18 +8,33 @@ const WorkEducationList = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const workResponse = await fetch("/public/workList.json");
-      const educationResponse = await fetch("/public/eduList.json");
+      try {
+        const workResponse = await fetch("/workList.json");
+        const educationResponse = await fetch("/eduList.json");
 
-      const workJson = await workResponse.json();
-      const educationJson = await educationResponse.json();
+        if (!workResponse.ok) {
+          throw new Error(
+            `Ошибка загрузки workList.json: ${workResponse.statusText}`
+          );
+        }
+        if (!educationResponse.ok) {
+          throw new Error(
+            `Ошибка загрузки eduList.json: ${educationResponse.statusText}`
+          );
+        }
 
-      if (workJson.work) {
-        setWorkData(Object.values(workJson.work));
-      }
+        const workJson = await workResponse.json();
+        const educationJson = await educationResponse.json();
 
-      if (educationJson.edu) {
-        setEducationData(Object.values(educationJson.edu));
+        if (workJson.work) {
+          setWorkData(Object.values(workJson.work));
+        }
+
+        if (educationJson.edu) {
+          setEducationData(Object.values(educationJson.edu));
+        }
+      } catch (error) {
+        console.error("Ошибка при загрузке данных:", error);
       }
     };
 
