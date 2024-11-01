@@ -58,7 +58,7 @@ const ContactMe: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-6 border border-gray-200 dark:border-gray-600 rounded-xl"
+      className="p-6 border border-gray-200 dark:border-gray-600 rounded-xl text-black dark:text-white"
     >
       <h2 className="text-2xl font-bold mb-6 text-center">
         Рад ответить на ваш следующий проект
@@ -76,7 +76,7 @@ const ContactMe: React.FC = () => {
           name="name"
           value={formData.name}
           onChange={handleInputChange}
-          className="mt-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 border dark:border-gray-600 border-gray-200 rounded-md w-full text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="mt-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 border dark:border-gray-600 border-gray-200 rounded-md w-full  focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Ваше имя"
           required
         />
@@ -91,7 +91,7 @@ const ContactMe: React.FC = () => {
           name="contact"
           value={formData.contact}
           onChange={handleInputChange}
-          className="mt-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 border dark:border-gray-600 border-gray-200 rounded-md w-full text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="mt-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 border dark:border-gray-600 border-gray-200 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Номер телефона, почта, телеграм и т.д."
           required
         />
@@ -106,7 +106,7 @@ const ContactMe: React.FC = () => {
           name="message"
           value={formData.message}
           onChange={handleInputChange}
-          className="mt-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 border dark:border-gray-600 border-gray-200 rounded-md w-full text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="mt-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 border dark:border-gray-600 border-gray-200 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
           rows={4}
           placeholder="Например: лендинг для кофейни"
           required

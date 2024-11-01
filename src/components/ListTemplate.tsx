@@ -1,5 +1,6 @@
 import React from "react";
 import BuildingLogo from "../ui/BuildingLogo";
+import Tags from "../ui/Tags";
 
 interface ListItemTemplateProps {
   name: string;
@@ -25,9 +26,9 @@ const ListItemTemplate: React.FC<ListItemTemplateProps> = ({
       </div>
 
       <div>
-        <p className="text-xs text-gray-400">{date}</p>
+        <p className="text-s text-gray-600 dark:text-gray-400">{date}</p>
         <h2 className="font-bold text-xl">{name}</h2>
-        <p className="text-xs text-gray-400">{positionOrMajor}</p>
+        <p className="text-s text-gray-600 dark:text-gray-400">{positionOrMajor}</p>
         {isWork && <a href={website}>{website}</a>}
         <ul className="list-disc px-4">
           {responsibilitiesOrSkills.map((item: string, idx: number) => (
