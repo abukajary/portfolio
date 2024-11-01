@@ -12,19 +12,29 @@ const WorkEducationList = () => {
         const workResponse = await fetch("/workList.json");
         const educationResponse = await fetch("/eduList.json");
 
+        // Проверяем статус ответа
         if (!workResponse.ok) {
           throw new Error(
-            `Ошибка загрузки workList.json: ${workResponse.statusText}`
+            `Ошибка загрузки workList.json: ${workResponse.status} ${workResponse.statusText}`
           );
         }
         if (!educationResponse.ok) {
           throw new Error(
-            `Ошибка загрузки eduList.json: ${educationResponse.statusText}`
+            `Ошибка загрузки eduList.json: ${educationResponse.status} ${educationResponse.statusText}`
           );
         }
 
-        const workJson = await workResponse.json();
-        const educationJson = await educationResponse.json();
+        // Пробуем распарсить ответ как текст для отладки
+        const workText = await workResponse.text();
+        const educationText = await educationResponse.text();
+
+        // Выводим текстовые ответы в консоль для проверки их содержимого
+        console.log("workList.json response:", workText);
+        console.log("eduList.json response:", educationText);
+
+        // Пытаемся конвертировать в JSON
+        const workJson = JSON.parse(workText);
+        const educationJson = JSON.parse(educationText);
 
         if (workJson.work) {
           setWorkData(Object.values(workJson.work));
