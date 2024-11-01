@@ -5,7 +5,7 @@ import Tags from "../ui/Tags";
 
 const About = () => {
   return (
-    <div>
+    <div className="flex items-center gap-5">
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-2 text-sm">
           <p className="text-2xl font-bold">
@@ -16,6 +16,7 @@ const About = () => {
             свободно разговариваю на казахском, русском и английском языках.
             изучаю немецкий и японский. Решаю задачи на leetcode
           </p>
+
           <div className="flex flex-rowitems-center gap-5 px-4">
             <ul className="list-disc w-1/2">
               <li>react.js</li>
@@ -48,6 +49,13 @@ const About = () => {
             <TelegramLogo />
           </a>
         </div>
+      </div>
+      <div className="flex items-center justify-center h-full">
+        <img
+          className="rounded-xl h-full object-cover"
+          src="/me.jpg"
+          alt=":("
+        />
       </div>
     </div>
   );

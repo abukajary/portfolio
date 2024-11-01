@@ -7,7 +7,7 @@ import Contactme from "./components/Contactme";
 
 function App() {
   return (
-    <div className="max-w-6xl mx-auto p-4 px-36 flex flex-col gap-10">
+    <div className="max-w-max md:max-w-6xl md:mx-auto p-4 md:px-36 flex flex-col gap-10">
       <Header />
       <About />
       <WorkEducationList />

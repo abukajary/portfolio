@@ -8,43 +8,23 @@ const WorkEducationList = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const workResponse = await fetch("/workList.json");
-        const educationResponse = await fetch("/eduList.json");
+      const headers = {
+        "Content-Type": "application/json",
+        "User-agent": "learning app",
+      };
 
-        // Проверяем статус ответа
-        if (!workResponse.ok) {
-          throw new Error(
-            `Ошибка загрузки workList.json: ${workResponse.status} ${workResponse.statusText}`
-          );
-        }
-        if (!educationResponse.ok) {
-          throw new Error(
-            `Ошибка загрузки eduList.json: ${educationResponse.status} ${educationResponse.statusText}`
-          );
-        }
+      const workResponse = await fetch("/WorkList.json", { headers });
+      const educationResponse = await fetch("/EduList.json", { headers });
 
-        // Пробуем распарсить ответ как текст для отладки
-        const workText = await workResponse.text();
-        const educationText = await educationResponse.text();
+      const workJson = await workResponse.json();
+      const educationJson = await educationResponse.json();
 
-        // Выводим текстовые ответы в консоль для проверки их содержимого
-        console.log("workList.json response:", workText);
-        console.log("eduList.json response:", educationText);
+      if (workJson.work) {
+        setWorkData(Object.values(workJson.work));
+      }
 
-        // Пытаемся конвертировать в JSON
-        const workJson = JSON.parse(workText);
-        const educationJson = JSON.parse(educationText);
-
-        if (workJson.work) {
-          setWorkData(Object.values(workJson.work));
-        }
-
-        if (educationJson.edu) {
-          setEducationData(Object.values(educationJson.edu));
-        }
-      } catch (error) {
-        console.error("Ошибка при загрузке данных:", error);
+      if (educationJson.edu) {
+        setEducationData(Object.values(educationJson.edu));
       }
     };
 
@@ -60,7 +40,7 @@ const WorkEducationList = () => {
           }`}
           onClick={() => setActiveTab("work")}
         >
-          Работа
+          опыт работы
         </button>
         <button
           className={`px-4 py-2 rounded w-1/2 ${
@@ -68,12 +48,12 @@ const WorkEducationList = () => {
           }`}
           onClick={() => setActiveTab("education")}
         >
-          Образование
+          образование
         </button>
       </div>
 
       {activeTab === "work" ? (
-        <div className="border border-gray-600 rounded-xl">
+        <div className="border border-gray-200 dark:border-gray-600 rounded-xl">
           {workData.length > 0 ? (
             workData.map((item, index) => (
               <ListItemTemplate
@@ -91,7 +71,7 @@ const WorkEducationList = () => {
           )}
         </div>
       ) : (
-        <div className="border border-gray-600 rounded-xl">
+        <div className="border border-gray-200 dark:border-gray-600 rounded-xl">
           {educationData.length > 0 ? (
             educationData.map((item, index) => (
               <ListItemTemplate

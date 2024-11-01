@@ -58,7 +58,7 @@ const ContactMe: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-6 border border-gray-600 rounded-xl"
+      className="p-6 border border-gray-200 dark:border-gray-600 rounded-xl"
     >
       <h2 className="text-2xl font-bold mb-6 text-center">
         Рад ответить на ваш следующий проект
@@ -120,6 +120,7 @@ const ContactMe: React.FC = () => {
       >
         {loading ? "Отправка..." : "Отправить"}
       </button>
+      <p className="pt-2">Либо напишите мне на почту - jarylgapov.abubakir@gmail.com</p>
     </form>
   );
 };

@@ -8,7 +8,7 @@ const Projects = () => {
         <h1 className="text-2xl font-bold">мои работы</h1>
         <div className="text-purple-500 cursor-pointer">смотреть больше</div>
       </div>
-      <div className="flex gap-10 p-5 mt-5 border border-gray-600 rounded-xl">
+      <div className="flex flex-col md:flex-row gap-10 p-5 mt-5 border border-gray-200 dark:border-gray-600 rounded-xl">
         <div className="flex flex-col-reverse">
           <div className="py-4">
             <img src="./libreous.png" alt="" />

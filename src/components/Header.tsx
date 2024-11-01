@@ -7,10 +7,11 @@ const Header = () => {
     <header>
       <div className="flex justify-between items-center font-semibold text-sm md:text-lg">
         <div className="flex gap-2 ">
-          <h1>главная</h1>
+          {/* <h1>главная</h1>
           <h1>опыт</h1>
           <h1>проекты</h1>
-          <h1>контакты</h1>
+          <h1>контакты</h1> */}
+          <h1>abuka.dev</h1>
         </div>
         <button onClick={toggleTheme}>
           <img
