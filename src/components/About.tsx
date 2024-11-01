@@ -5,7 +5,7 @@ import Tags from "../ui/Tags";
 
 const About = () => {
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex flex-col md:flex-row items-center gap-5">
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-2 text-sm">
           <p className="text-2xl font-bold">
@@ -50,9 +50,9 @@ const About = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-center h-full">
+      <div className="flex items-center justify-center h-1/2 md:h-full">
         <img
-          className="rounded-xl h-full object-cover"
+          className="rounded-xl h-1/2 md:h-full object-cover"
           src="/me.jpg"
           alt=":("
         />
