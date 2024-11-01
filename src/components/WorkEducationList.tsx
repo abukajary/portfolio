@@ -8,8 +8,9 @@ const WorkEducationList = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const workResponse = await fetch("/workList.json");
-      const educationResponse = await fetch("/eduList.json");
+      const workResponse = await fetch("/public/workList.json");
+      const educationResponse = await fetch("/public/eduList.json");
+
       const workJson = await workResponse.json();
       const educationJson = await educationResponse.json();
 
