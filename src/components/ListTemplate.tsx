@@ -1,6 +1,5 @@
 import React from "react";
 import BuildingLogo from "../ui/BuildingLogo";
-import Tags from "../ui/Tags";
 
 interface ListItemTemplateProps {
   name: string;
