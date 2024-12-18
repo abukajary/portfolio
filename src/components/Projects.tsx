@@ -18,7 +18,7 @@ const Projects = () => {
           </div>
           <div>
             <p className="text-xl font-semibold font-serif">
-              01 | <a href="mobileplus.store">mobileplus.store</a>
+              01 | <a href="https://www.mobileplus.store/">mobileplus.store</a>
             </p>
             <p className="text-gray-500">
               дипломный проект про продажу смартфонов через сайт. Backend с
